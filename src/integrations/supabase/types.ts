@@ -14,7 +14,117 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      carbon_estimates: {
+        Row: {
+          carbon_g: number
+          carbon_kg: number
+          carbon_mt: number
+          created_at: string | null
+          estimate_data: Json
+          estimate_type: string
+          estimated_at: string | null
+          id: string
+          user_id: string
+        }
+        Insert: {
+          carbon_g: number
+          carbon_kg: number
+          carbon_mt: number
+          created_at?: string | null
+          estimate_data: Json
+          estimate_type: string
+          estimated_at?: string | null
+          id?: string
+          user_id: string
+        }
+        Update: {
+          carbon_g?: number
+          carbon_kg?: number
+          carbon_mt?: number
+          created_at?: string | null
+          estimate_data?: Json
+          estimate_type?: string
+          estimated_at?: string | null
+          id?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          country: string | null
+          created_at: string | null
+          email: string | null
+          id: string
+          name: string | null
+          state: string | null
+          updated_at: string | null
+          user_id: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          country?: string | null
+          created_at?: string | null
+          email?: string | null
+          id?: string
+          name?: string | null
+          state?: string | null
+          updated_at?: string | null
+          user_id: string
+        }
+        Update: {
+          avatar_url?: string | null
+          country?: string | null
+          created_at?: string | null
+          email?: string | null
+          id?: string
+          name?: string | null
+          state?: string | null
+          updated_at?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
+      user_habits: {
+        Row: {
+          consumption: Json | null
+          created_at: string | null
+          diet: Json | null
+          energy: Json | null
+          housing: Json | null
+          id: string
+          transportation: Json | null
+          travel: Json | null
+          updated_at: string | null
+          user_id: string
+        }
+        Insert: {
+          consumption?: Json | null
+          created_at?: string | null
+          diet?: Json | null
+          energy?: Json | null
+          housing?: Json | null
+          id?: string
+          transportation?: Json | null
+          travel?: Json | null
+          updated_at?: string | null
+          user_id: string
+        }
+        Update: {
+          consumption?: Json | null
+          created_at?: string | null
+          diet?: Json | null
+          energy?: Json | null
+          housing?: Json | null
+          id?: string
+          transportation?: Json | null
+          travel?: Json | null
+          updated_at?: string | null
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
